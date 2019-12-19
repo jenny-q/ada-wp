@@ -469,6 +469,8 @@ Version: 1.0
   }
   
 /* custom styling */
-.navbar {
-  padding: 0 1.5rem;
+.hero {
+  height: 500px;
+  width: 100%;
+  background-size: cover;
 }

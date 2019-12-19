@@ -1,16 +1,20 @@
 <?php get_header();?>
 
-<section class="hero container">
-  <div class="hero--banner__bg-image" style="background-image: url(<?php echo get_theme_file_uri('/images/library-hero.jpg') ?>);"></div>
-
-  <div class="hero--container">
-    <h1 class="headline headline--large">Welcome!</h1>
-    <h2 class="headline headline--medium">We think you&rsquo;ll like it here.</h2>
-    <h3 class="headline headline--small">Why don&rsquo;t you check out the <strong>major</strong> you&rsquo;re interested in?</h3>
-    <a href="#" class="btn btn--large btn--blue">Find Your Major</a>
+<section class="hero container" aria-label="featured post" style="background-image: url(<?php echo get_theme_file_uri('/images/featured.jpg') ?>);">
+  <div class="hero__body hero-body">
+    <div class="container">
+      <h1 class="title">
+        ygarden
+      </h1>
+      <h2 class="subtitle">
+        learn how to grow plants
+      </h2>
+    </div>
   </div>
+
 </section>
 
+<section class="container" aria-label="partial">
   <div class="columns">
     <div class="column">
       <div class="full-width-split__inner">
@@ -48,7 +52,7 @@
 
     <div class="column">
       <div class="full-width-split__inner">
-        <h2 class="headline headline--small-plus t-center">From Our Blogs</h2>
+        <h2 class="headline headline--small-plus t-center">ygarden daily blog</h2>
         <?php
         $homepagePosts = new WP_Query(array(
           'posts_per_page' => 3
@@ -56,6 +60,40 @@
 
         while($homepagePosts->have_posts()) {
           $homepagePosts->the_post(); ?>
+
+<article class="media">
+  <figure class="media-left">
+    <p class="image is-64x64">
+      <img src="https://bulma.io/images/placeholders/128x128.png">
+    </p>
+  </figure>
+  <div class="media-content">
+    <div class="content">
+      <p>
+        <strong>John Smith</strong> <small>@johnsmith</small> <small>31m</small>
+        <br>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+      </p>
+    </div>
+    <nav class="level is-mobile">
+      <div class="level-left">
+        <a class="level-item">
+          <span class="icon is-small"><i class="fas fa-reply"></i></span>
+        </a>
+        <a class="level-item">
+          <span class="icon is-small"><i class="fas fa-retweet"></i></span>
+        </a>
+        <a class="level-item">
+          <span class="icon is-small"><i class="fas fa-heart"></i></span>
+        </a>
+      </div>
+    </nav>
+  </div>
+  <div class="media-right">
+    <button class="delete"></button>
+  </div>
+</article>
+
             <div class="event-summary">
               <a class="event-summary__date event-summary__date--beige t-center" href="<?php the_permalink(); ?>">
                 <span class="event-summary__month"><?php the_time('M'); ?></span>
@@ -81,16 +119,16 @@
     </div>
   </div>
 
-<!--favorites-->
-<div class="columns">
-  <div class="column">
+  <!--favorites-->
+  <div class="columns">
+    <div class="column">
+    </div>
+    <div class="column">
+    </div>
+    <div class="column">
+    </div>
+    <div class="column">
+    </div>
   </div>
-  <div class="column">
-  </div>
-  <div class="column">
-  </div>
-  <div class="column">
-  </div>
-</div>
-
+</section>
 <?php get_footer();?>

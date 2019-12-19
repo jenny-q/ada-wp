@@ -1,30 +1,11 @@
 <footer class="footer">
-  <div class="columns">
-    <div class="column">
-       <strong>ygarden</strong>
-    </div>
 
-    <div class="column">
-      <nav class="nav-list">
-        <?php 
-          wp_nav_menu(array(
-            'theme_location' => 'footerLocationOne'
-          ));
-        ?>
-        </nav>
-    </div>
-
-    <div class="column">
-      <nav class="nav-list">
-          <?php 
-            wp_nav_menu(array(
-              'theme_location' => 'footerLocationTwo'
-            ));
-          ?>
-        </nav>
-    </div>
-
+  <div class="content has-text-centered">
+    <p>
+      <strong>ygarden</strong>(work in progress) theme by <a href="https://jenniferquispe.com">Jennifer Quispe</a>.  Built with bulma.io flexbox framework.
+    </p>
   </div>
+
 </footer>
 
 <?php wp_footer(); ?>

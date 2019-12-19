@@ -8,7 +8,7 @@
 <body <?php body_class(); ?>>
 
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
+<nav class="navbar container" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="">
       <strong>ygarden</strong>
@@ -22,13 +22,25 @@
   </div>
 
   <div id="navbarBasicExample" class="navbar-menu">
-    <div class="navbar-start">
-      <?php 
-        wp_nav_menu(array(
-          'theme_location' => 'headerMenuLocation'
-        ));
-      ?>
-    </div>
+    <!-- <div class="navbar-start">
+      <a class="navbar-item">
+        Home
+      </a>
+
+      <a class="navbar-item">
+        Documentation
+      </a>
+
+    </div> -->
+    <div class="navbar-end">
+    <a class="navbar-item " href="https://github.com/jenny-q">
+        <span class="button is-small">
+          github
+        </span>
+      </a>
+  </div>
 
   </div>
 </nav>
+
+
